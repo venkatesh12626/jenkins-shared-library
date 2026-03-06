@@ -10,18 +10,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the project from the 'project-1' branch in your GitHub repository
-                git branch: 'main', url: '@Library('my-shared-lib') _
-
-pipeline {
-    agent any
-    tools {
-        maven 'maven3.9.12'  // Use the Maven tool installed earlier
-        jdk 'java17'        // Use JDK 17
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the project from the 'project-1' branch in your GitHub repository
                 git branch: 'main', url: 'https://github.com/venkatesh12626/jenkins-shared-library.git'
             }
         }
@@ -37,5 +25,9 @@ pipeline {
         }
     }
 }
+
+
+
+
 
 
